@@ -1,3 +1,4 @@
+""" To extract details from edv Confirmation Page And Save them On a Excell Sheet"""
 from pathlib import Path
 from pdfminer.high_level import extract_text
 import re
@@ -12,7 +13,7 @@ conf_numb=[]
 year=[]
 digital_sig=[]
 # Specify the path to your folder
-directory_path = Path("path")  # Use your actual folder path
+directory_path = Path("path")
 
 # Loop through each file in the directory
 for file_path in directory_path.iterdir():
@@ -38,7 +39,7 @@ for file_path in directory_path.iterdir():
             conf_numb.append(confirmation_number)
             
         
-        # ti extarct year
+        # to extarct year
         year_of_birth_pattern = r"(?<=Year of Birth:\s)(\d{4})"
         year_of_birth_match = re.search(year_of_birth_pattern, text)
         if year_of_birth_match:
