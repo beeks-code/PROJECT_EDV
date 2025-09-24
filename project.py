@@ -1,4 +1,4 @@
-""" To extract details from edv Confirmation Page And Save them On a Excell Sheet"""
+
 from pathlib import Path
 from pdfminer.high_level import extract_text
 import re
